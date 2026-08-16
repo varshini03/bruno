@@ -52,6 +52,8 @@ export const logsSlice = createSlice({
       };
 
       state.logs.push(newLog);
+      state.isConsoleOpen = true;
+      state.activeTab = 'console';
 
       if (state.logs.length > MAX_LOGS) {
         state.logs = state.logs.slice(-MAX_LOGS);
